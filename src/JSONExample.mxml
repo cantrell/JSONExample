@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   applicationComplete="onApplicationComplete();">
+	<fx:Script>
+		<![CDATA[
+			
+			import flash.globalization.DateTimeFormatter;
+			import flash.globalization.DateTimeStyle;
+			import flash.globalization.LocaleID;
+			
+			import mx.rpc.events.ResultEvent;
+			
+			private var df:DateTimeFormatter;
+			
+			private function onApplicationComplete():void
+			{
+				var f:File = File.applicationDirectory.resolvePath("feeds.json");
+				var fs:FileStream = new FileStream();
+				fs.open(f, FileMode.READ);
+				var feedJson:String = fs.readUTFBytes(fs.bytesAvailable);
+				fs.close();
+				var feeds:Object = JSON.parse(feedJson);
+				this.feedTree.dataProvider = feeds;
+				this.postHtmlContainer.htmlLoader.navigateInSystemBrowser = true;
+				df = new DateTimeFormatter(LocaleID.DEFAULT, DateTimeStyle.MEDIUM, DateTimeStyle.NONE);
+			}
+			
+			private function onTreeClick(e:MouseEvent):void
+			{
+				if (!this.feedTree.selectedItem || !this.feedTree.selectedItem.data) return;
+				feedService.send({v:'1.0',num:'20',q:this.feedTree.selectedItem.data});
+			}
+			
+			private function onFeedLoaded(e:ResultEvent):void
+			{
+				var result:String = e.result.toString();
+				var feedData:Object = JSON.parse(result);
+				var s:String = '<html><body>';
+				s += '<h1>Posts for ' + feedData.responseData.feed.title + '</h1>';
+				for each (var post:Object in feedData.responseData.feed.entries)
+				{
+					s += '<p class="postTitle"><a href="' + post.link + '">' + post.title + '&nbsp;&nbsp;&#0187;</a></p>';
+					s += '<p>' + df.format(new Date(post.publishedDate)) + '</p>';
+					s += '<p>' + post.content + '</p><hr/>';
+				}
+				s += '</body></html>';
+				this.postHtmlContainer.htmlText = s;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:HTTPService id="feedService" url="https://ajax.googleapis.com/ajax/services/feed/load" result="onFeedLoaded(event)" resultFormat="text" contentType="application/x-www-form-urlencoded" method="GET" showBusyCursor="true" />
+	</fx:Declarations>
+	
+	<mx:HDividedBox width="100%" height="100%">
+		<mx:Tree id="feedTree" width="200" height="100%" click="onTreeClick(event);"/>
+		<mx:HTML width="100%" height="100%" id="postHtmlContainer"/>
+	</mx:HDividedBox>
+</s:WindowedApplication>

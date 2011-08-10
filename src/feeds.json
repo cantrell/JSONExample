@@ -1,0 +1,221 @@
+[{
+  "label": "News",
+  "type": "folder",
+  "children": [
+    {
+      "label": "BBC",
+      "type": "text",
+      "data": "http://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "label": "Al Jazeera English",
+      "type": "text",
+      "data": "http://english.aljazeera.net/Services/Rss/?PostingId=2007731105943979989"
+    },
+    {
+      "label": "New York Times",
+      "type": "text",
+      "data": "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+    },
+    {
+      "label": "Washington Post",
+      "type": "text",
+      "data": "http://www.washingtonpost.com/wp-dyn/rss/linkset/2005/03/24/LI2005032400102.xml"
+    }
+  ]
+},
+{
+  "label": "Tech News",
+  "type": "folder",
+  "children": [
+    {
+      "label": "Ars Technica",
+      "type": "text",
+      "data": "http://feeds.arstechnica.com/arstechnica/index/"
+    },
+    {
+      "label": "CNET",
+      "type": "text",
+      "data": "http://news.cnet.com/2547-1_3-0-20.xml"
+    },
+    {
+      "label": "Fast Company",
+      "type": "text",
+      "data": "http://www.fastcompany.com/rss.xml"
+    },
+    {
+      "label": "ReadWriteWeb",
+      "type": "text",
+      "data": "http://www.readwriteweb.com/rss.xml"
+    },
+    {
+      "label": "Techmeme",
+      "type": "text",
+      "data": "http://www.techmeme.com/index.xml"
+    },
+    {
+      "label": "Wired Top Stories",
+      "type": "text",
+      "data": "http://feeds.wired.com/wired/index"
+    }
+  ]
+},
+{
+  "label": "Tech Blogs",
+  "type": "folder",
+  "children": [
+    {
+      "label": "al3x",
+      "type": "text",
+      "data": "http://feeds2.feedburner.com/al3x"
+    },
+    {
+      "label": "Boy Genius Report",
+      "type": "text",
+      "data": "http://www.boygeniusreport.com/feed/"
+    },
+    {
+      "label": "Engadget",
+      "type": "text",
+      "data": "http://www.engadget.com/rss.xml"
+    },
+    {
+      "label": "I, Cringely",
+      "type": "text",
+      "data": "http://feeds.feedburner.com/ICringely"
+    },
+    {
+      "label": "O'Reilly Radar",
+      "type": "text",
+      "data": "http://feeds.feedburner.com/oreilly/radar/atom"
+    }
+  ]
+},
+{
+  "label": "Blogs",
+  "type": "folder",
+  "children": [
+    {
+      "label": "Boing Boing",
+      "type": "text",
+      "data": "http://feeds.boingboing.net/boingboing/iBag"
+    },
+    {
+      "label": "kottke.org",
+      "type": "text",
+      "data": "http://feeds.kottke.org/main"
+    },
+    {
+      "label": "Waxy.org",
+      "type": "text",
+      "data": "http://waxy.org/index.xml"
+    }
+  ]
+},
+{
+  "label": "Science",
+  "type": "folder",
+  "children": [
+    {
+      "label": "APOD",
+      "type": "text",
+      "data": "http://apod.nasa.gov/apod.rss"
+    },
+    {
+      "label": "Discovery Space News",
+      "type": "text",
+      "data": "http://dsc.discovery.com/news/subjects/space/xml/top-stories.xml"
+    },
+    {
+      "label": "ScienceDaily",
+      "type": "text",
+      "data": "http://feeds.sciencedaily.com/sciencedaily"
+    },
+    {
+      "label": "Scientific American",
+      "type": "text",
+      "data": "http://rss.sciam.com/ScientificAmerican-Global"
+    },
+    {
+      "label": "SPACE.com",
+      "type": "text",
+      "data": "http://feeds.feedburner.com/spaceheadlines"
+    }
+  ]
+},
+{
+  "label": "Comics",
+  "type": "folder",
+  "children": [
+    {
+      "label": "Buttersafe",
+      "type": "text",
+      "data": "http://buttersafe.com/feed/"
+    },
+    {
+      "label": "Ctrl+Alt+Del",
+      "type": "text",
+      "data": "http://www.cad-comic.com/rss/"
+    },
+    {
+      "label": "Dilbert",
+      "type": "text",
+      "data": "http://feeds.dilbert.com/DilbertDailyStrip"
+    },
+    {
+      "label": "Dinosaur Comics",
+      "type": "text",
+      "data": "http://rsspect.com/rss/qwantz.xml"
+    },
+    {
+      "label": "Doonesbury Daily Dose",
+      "type": "text",
+      "data": "http://www.gyford.com/misc/doonesburyrss.php"
+    },
+    {
+      "label": "Married To The Sea",
+      "type": "text",
+      "data": "http://www.marriedtothesea.com/rss/rss.php"
+    },
+    {
+      "label": "microkosmic",
+      "type": "text",
+      "data": "http://www.microkosmic.com/comic/atom.xml"
+    },
+    {
+      "label": "The Oatmeal",
+      "type": "text",
+      "data": "http://theoatmeal.com/feed/rss"
+    },
+    {
+      "label": "Penny Arcade",
+      "type": "text",
+      "data": "http://feeds.penny-arcade.com/pa-mainsite"
+    },
+    {
+      "label": "A Softer World",
+      "type": "text",
+      "data": "http://www.rsspect.com/rss/asw.xml"
+    },
+    {
+      "label": "Toothpaste For Dinner",
+      "type": "text",
+      "data": "http://www.toothpastefordinner.com/rss/rss.php"
+    },
+    {
+      "label": "User Friendly",
+      "type": "text",
+      "data": "http://userfriendly.org/rss/uf.rss"
+    },
+    {
+      "label": "Wondermark",
+      "type": "text",
+      "data": "http://feeds.feedburner.com/wondermark"
+    },
+    {
+      "label": "xkcd",
+      "type": "text",
+      "data": "http://xkcd.com/rss.xml"
+    }
+  ]
+}]
